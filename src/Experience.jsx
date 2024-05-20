@@ -16,6 +16,14 @@ import Couch from './Models/Couch';
 import RoundTableWithCards from './Models/RoundTableWithCards';
 import Monitors from './Models/Monitors';
 import Keyboard from './Models/Keyboard';
+import Mouse from './Models/Mouse';
+import BookShelf from './Models/BookShelf';
+import Flag from './Models/Flag';
+import NeonSign from './Models/NeonSign';
+import LogoSign from './Models/LogoSign';
+import TV from './Models/TV';
+import Plant1 from './Models/Plant1';
+import Plant2 from './Models/Plant2';
 
 
 
@@ -97,7 +105,16 @@ function Experience() {
         <Couch officeWidth={officeWidth} officeLength={officeLength}/>
         <RoundTableWithCards officeWidth={officeWidth}/>
         <Monitors tableHeight={tableHeight}/>
-        <Keyboard tableHeight={tableHeight}/>
+        <Keyboard tableHeight={tableHeight}/> 
+        <Mouse tableHeight={tableHeight}/>
+        <BookShelf officeWidth={officeWidth} officeLength={officeLength} standardYforObjects={standardYforObjects}/>
+        <Flag officeWidth={officeWidth} officeLength={officeLength}/>
+        <NeonSign standardYforObjects={standardYforObjects} officeWidth={officeWidth}/>
+        <LogoSign standardYforObjects={standardYforObjects} officeWidth={officeWidth}/>
+        <TV standardYforObjects={standardYforObjects} officeWidth={officeWidth}/>
+        <Plant1 officeWidth={officeWidth}/>
+        <Plant2 officeWidth={officeWidth} officeLength={officeLength}/>
+
 
     </>
   )
