@@ -16,7 +16,7 @@ import { Leva } from 'leva'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Leva collapsed/>
-    <Canvas camera={{fov: 45 , near: 0.1 , far : 200 , position : [3 , 2 , 6]  }} gl={{antialias : false , toneMapping : THREE.ACESFilmicToneMapping , outputEncoding : THREE.sRGBEncoding}} flat shadows={false}> 
+    <Canvas camera={{fov: 45 , near: 0.1 , far : 200 , position : [3 , 2 , 6]  }} gl={{antialias : false , toneMapping : THREE.ACESFilmicToneMapping , outputEncoding : THREE.sRGBEncoding}} flat shadows> 
         {/* <color args={['#ff0000']} attach="background"/> */}
         <Experience />
     </Canvas>
