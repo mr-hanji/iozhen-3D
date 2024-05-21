@@ -7,3 +7,14 @@ html , body , #root {
   overflow: hidden;
   /* background-color: lightskyblue; */
 }
+
+
+.htmlScreen iframe {
+  width: 1024px;
+  height: 670px;
+  border: none;
+  /* border-radius: 20px; */
+  background: #000;
+  
+}
+
