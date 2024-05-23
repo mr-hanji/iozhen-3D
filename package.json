@@ -10,12 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/fiber": "8.8",
+    "@react-spring/three": "^9.7.3",
     "@react-three/drei": "^9.32.3",
+    "@react-three/fiber": "8.8",
+    "@reduxjs/toolkit": "^2.2.5",
     "leva": "^0.9.35",
     "r3f-perf": "6.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^9.1.2",
+    "redux": "^5.0.1",
     "three": "^0.145.0"
   },
   "devDependencies": {
