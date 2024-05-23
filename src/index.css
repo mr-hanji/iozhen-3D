@@ -16,3 +16,10 @@ body,
   border: none;
   background: #fff;
 }
+
+.video video {
+  width: 2600px;
+  height: 1500px;
+  border: none;
+  background: #000;
+}

@@ -38,6 +38,9 @@ import Plant2 from "./Models/Plant2";
 import CokeCan from "./Models/CokeCan";
 import Headphones from "./Models/Headphones";
 import { useSelector } from "react-redux";
+import Mug from "./Models/Mug";
+import PenHolder from "./Models/PenHolder";
+import Phone from "./Models/Phone";
 
 function Experience() {
   const standardYforObjects = 4.5;
@@ -160,6 +163,9 @@ function Experience() {
       <Plant2 officeWidth={officeWidth} officeLength={officeLength} />
       <CokeCan officeWidth={officeWidth} officeLength={officeLength} />
       <Headphones tableHeight={tableHeight} />
+      <Mug tableHeight={tableHeight} />
+      <PenHolder tableHeight={tableHeight} />
+      <Phone officeWidth={officeWidth} officeLength={officeLength} />
     </>
   );
 }
