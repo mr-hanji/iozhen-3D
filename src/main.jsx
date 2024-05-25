@@ -8,6 +8,7 @@ import { Leva } from "leva";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import LoadingBar from "./LoadingBar"; // Import the LoadingBar component
+//test
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
