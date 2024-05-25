@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useGLTF, Clone, Html } from "@react-three/drei";
 
 export default function TV({ standardYforObjects, officeWidth }) {
   const tv = useGLTF("/objects/TV.glb");
+  const [video] = useState(() => {
+    const vid = document.createElement("video");
+    vid.src = "/public/video1.mp4";
+    vid.crossOrigin = "Anonymous";
+    vid.loop = true;
+    vid.muted = true;
+    vid.play();
+    return vid;
+  });
   return (
     <>
       <primitive
@@ -11,17 +20,12 @@ export default function TV({ standardYforObjects, officeWidth }) {
         position={[officeWidth / 2 - 0.2, standardYforObjects, 0]}
         rotation-y={Math.PI}
       >
-        <Html
-          rotation-y={3.14 / 2}
-          transform
-          wrapperClass="htmlScreen"
-          distanceFactor={0.42}
-          position={[0.05, 0, -0.01]} // Adjusted the position to align with the TV screen
-        >
-          <div className="video">
-            <video playsInline loop autoPlay src="/video1.mp4" muted></video>
-          </div>
-        </Html>
+        <mesh rotation-y={Math.PI / 2}>
+          <planeGeometry args={[2.5, 1.5]} />
+          <meshStandardMaterial>
+            <videoTexture attach="map" args={[video]} />
+          </meshStandardMaterial>
+        </mesh>
       </primitive>
     </>
   );

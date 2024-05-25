@@ -2,7 +2,7 @@ import React from "react";
 import { useGLTF, Clone } from "@react-three/drei";
 
 export default function Headphones({ tableHeight }) {
-  const headphones = useGLTF("/objects/Headphones.glb");
+  const headphones = useGLTF("/objects/Headphones.drc");
   return (
     <>
       <primitive
@@ -15,4 +15,4 @@ export default function Headphones({ tableHeight }) {
   );
 }
 
-useGLTF.preload("/objects/Headphones.glb");
+useGLTF.preload("/objects/Headphones.drc");

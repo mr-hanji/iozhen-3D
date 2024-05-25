@@ -41,6 +41,7 @@ import { useSelector } from "react-redux";
 import Mug from "./Models/Mug";
 import PenHolder from "./Models/PenHolder";
 import Phone from "./Models/Phone";
+import Team from "./Models/Team";
 
 function Experience() {
   const standardYforObjects = 4.5;
@@ -162,10 +163,10 @@ function Experience() {
       <Plant1 officeWidth={officeWidth} />
       <Plant2 officeWidth={officeWidth} officeLength={officeLength} />
       <CokeCan officeWidth={officeWidth} officeLength={officeLength} />
-      <Headphones tableHeight={tableHeight} />
       <Mug tableHeight={tableHeight} />
       <PenHolder tableHeight={tableHeight} />
       <Phone officeWidth={officeWidth} officeLength={officeLength} />
+      <Team standardYforObjects={standardYforObjects} />
     </>
   );
 }
