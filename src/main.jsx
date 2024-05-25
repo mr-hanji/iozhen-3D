@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
@@ -7,13 +7,7 @@ import * as THREE from "three";
 import { Leva } from "leva";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
-
-
-// const created = (state) => {
-//   // state.gl.setClearColor("#ff0000" , 1) //for add bg to webGl
-//   // state.scene.background = new THREE.Color('#ff0000') //for add bg to scene
-// }
-// onCreated={created}
+import LoadingBar from "./LoadingBar"; // Import the LoadingBar component
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -30,7 +24,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         shadows
       >
         {/* <color args={['#ff0000']} attach="background"/> */}
-        <Experience />
+        <Suspense fallback={<LoadingBar />}>
+          <Experience />
+        </Suspense>
       </Canvas>
     </Provider>
   </React.StrictMode>

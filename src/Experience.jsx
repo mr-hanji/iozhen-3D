@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, Suspense } from "react";
 import { extend, useFrame, useThree } from "@react-three/fiber";
 import {
   Environment,
@@ -11,6 +11,8 @@ import {
   ContactShadows,
   Sky,
   Lightformer,
+  Loader,
+  Html,
 } from "@react-three/drei";
 import CustomeObj from "./CustomeObj";
 import { useControls, button } from "leva";
@@ -66,26 +68,11 @@ function Experience() {
     perfVisible: true,
   });
 
-  // const {colorShadow , opacity , blur} = useControls("contact shadow" , {
-  //     colorShadow : "#000000" ,
-  //     opacity : {
-  //         value : 1 ,
-  //         min : 0 ,
-  //         max : 1 ,
-  //     } ,
-  //     blur : {
-  //         value : 0 ,
-  //         min : 0 ,
-  //         max : 10
-  //     }
-
-  // })
-
   const { sunPosition } = useControls("sky", {
     sunPosition: { value: [1, 2, 3] },
   });
 
-  useHelper(dirRef, THREE.DirectionalLightHelper, 1); //add helper
+  useHelper(dirRef, THREE.DirectionalLightHelper, 1); // add helper
 
   console.log(isClicked);
 
@@ -94,9 +81,6 @@ function Experience() {
       {perfVisible && <Perf position="top-left" />}
 
       <OrbitControls makeDefault enabled={!isClicked} />
-
-      {/* <ContactShadows position={[0 , 0 , 0]} scale={10} resolution={512} far={5} color={colorShadow} opacity={opacity} blur={blur} /> */}
-      {/*frames={1}  //its good */}
 
       <directionalLight
         castShadow
